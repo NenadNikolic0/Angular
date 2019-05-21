@@ -1,0 +1,51 @@
+<!--Dashboard header-->
+<div class="row custom-navbar">
+  <div class="col-xs-3">
+    <span class="logo">Demo App</span>
+  </div>
+
+  <div class="col-xs-6">
+
+  </div>
+
+  <div class="col-xs-3">
+    <div class="col-xs-10">
+      <span class="glyphicon glyphicon-user user-logout">{{username}}</span>
+    </div>
+
+    <div class="col-xs-2">
+      <span class="glyphicon glyphicon-triangle-bottom triangle-bottom" (click)="showDialog()"></span>
+    </div>
+  </div>
+</div>
+
+<!--Dashboard body-->
+<div class="container dashboard-body">
+
+  <div class="row">
+    <h3 style="padding-left:20px;">Welcome {{username}}</h3>
+  </div>
+
+</div>
+
+
+
+
+<!--Dashboard footer-->
+<div class="row dashboard-footer text-center">
+  <span class="product-rights">&#169;&nbsp;&nbsp;2018</span>
+</div>
+
+
+<!--Logout div-->
+<div class="row logout-div" *ngIf="logoutDialog">
+  <div class="row logout-div-body">
+    <span class="zip"></span>
+    <span class="email"></span>
+  </div>
+
+  <div class="row logout-div-footer text-right">
+    <a href="/login" class="btn btn-default signout-button">Sign out</a>
+  </div>
+
+</div>
